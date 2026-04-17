@@ -1,19 +1,13 @@
 CC = gcc
-CFLAGS = -fPIC -O2 -Wall -g
+CFLAGS = -Wall -O2 -fPIC -g
 LDFLAGS = -shared
 
-TARGET = build/libops.so
+SRC = codigo/bridge.c codigo/ops.s
+OUT = build/libops.so
 
-all: $(TARGET)
-
-$(TARGET): bridge.o ops.o
-	$(CC) $(LDFLAGS) -o $@ $^
-
-bridge.o: bridge.c
-	$(CC) $(CFLAGS) -c bridge.c
-
-ops.o: ops.s
-	$(CC) $(CFLAGS) -c ops.s
+all:
+	mkdir -p build
+	$(CC) $(CFLAGS) $(SRC) $(LDFLAGS) -o $(OUT)
 
 clean:
-	rm -f *.o $(TARGET)
+	rm -rf build/*
