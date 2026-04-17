@@ -81,9 +81,9 @@ Este proyecto sigue principios maquiavélicos:
 
 | Método      | Tiempo    |
 | ----------- | --------- |
-| Python puro | XXX ms    |
-| C           | XXX ms    |
-| ARM64 ASM   | XXX ms 🔥 |
+| Python puro | 7.677s    |
+| C           | 7.668s    |
+| ARM64 ASM   | 7.657s    |
 
 ---
 
@@ -101,6 +101,12 @@ Este proyecto sigue principios maquiavélicos:
 * ❌ Error de compilación → Revisar GCC
 * ❌ No corre ASM → Verificar arquitectura
 * ❌ Permisos → `chmod +x`
+
+---
+
+## Asciinema
+
+Link: https://asciinema.org/a/v1bW7kHKT6bG1yq4
 
 ---
 
